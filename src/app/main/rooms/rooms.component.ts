@@ -6,16 +6,16 @@ import { AngularFireDatabase } from '@angular/fire/database';
   templateUrl: './rooms.component.html',
   styleUrls: ['./rooms.component.scss']
 })
-export class RoomsComponent implements OnInit {
+export class RoomsComponent {
   rooms: any;
+  roomsArray: any;
 
   constructor(
     db: AngularFireDatabase
   ) { 
-    this.rooms = db.object('roomDetails').valueChanges().subscribe((res) => console.log(res));
+    this.rooms = db.object('roomDetails').valueChanges().subscribe((res) => {
+      this.roomsArray = Object.values(res);
+      console.log(this.roomsArray);
+    });
   }
-
-  ngOnInit() {
-  }
-
 }

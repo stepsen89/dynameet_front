@@ -1,9 +1,14 @@
 <div class="columns is-fullheight-content">
-  <div class="column is-7 has-background-black">
-    <h2 class="title"> Title </h2>
-    <h3 class="subtitle"> Room Description</h3>
+  <div class="column is-5 has-background-black">
+    <h2 class="title"> Rooms Available </h2>
+    <h3 class="subtitle"> Select Filter </h3>
   </div>
-  <div class="column is-5">
-    Test
+  <div class="column is-7">
+    <div>
+      <h2> Room </h2>
+    </div>
+    <div *ngFor="let room of roomsArray; let i = index">
+      <app-room [room]="room" [index]="index"></app-room>
+    </div>
   </div>
 </div>
