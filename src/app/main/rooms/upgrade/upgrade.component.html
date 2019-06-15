@@ -1,7 +1,7 @@
 
-<h3 class="title"> Create an upgrade</h3>
 <div class="columns">
-  <div class="column is-6">
+  <div class="column is-6 is-offset-1">
+    <h3 class="title"> Create an Update </h3>
 
     <div class="field">
         <label class="label"> When? </label>
@@ -11,11 +11,18 @@
       </div>
       
       <div class="field">
-        <label class="label">Subject</label>
+          <label class="label"> What time? </label>
+          <div class="control">
+            <input class="input" type="text" placeholder="Text input">
+          </div>
+        </div>
+
+      <div class="field">
+        <label class="label"> Capacity </label>
         <div class="dropdown">
             <div class="dropdown-trigger">
               <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                <span>Capacity</span>
+                <span> - choose -</span>
                 <span class="icon is-small">
                   <i class="fas fa-angle-down" aria-hidden="true"></i>
                 </span>
@@ -48,20 +55,7 @@
         <div class="control">
           <label class="checkbox">
             <input type="checkbox">
-            I agree to the <a href="#">terms and conditions</a>
-          </label>
-        </div>
-      </div>
-      
-      <div class="field">
-        <div class="control">
-          <label class="radio">
-            <input type="radio" name="question">
-            Yes
-          </label>
-          <label class="radio">
-            <input type="radio" name="question">
-            No
+            I want to be notified
           </label>
         </div>
       </div>
@@ -69,9 +63,6 @@
       <div class="field is-grouped">
         <div class="control">
           <button class="button is-link">Submit</button>
-        </div>
-        <div class="control">
-          <button class="button is-text">Cancel</button>
         </div>
       </div>
   </div>
