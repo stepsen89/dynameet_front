@@ -21,12 +21,10 @@ const routes: Routes = [
       },{
         path: 'rooms',
         component: RoomsComponent,
-        children: [
-          {
-            path: ':id',
-            component: RoomComponent
-          }
-        ]}
+      }, {
+        path: 'rooms/:id',
+        component: RoomComponent
+      }
     ]
   },
   { path: '',
