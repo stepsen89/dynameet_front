@@ -5,6 +5,7 @@ import { MainComponent } from './main/main.component';
 import { RoomsComponent } from './main/rooms/rooms.component';
 import { RoomComponent } from './main/rooms/room/room.component';
 import { BookingComponent } from './main/booking/booking.component';
+import { UpgradeComponent } from './main/rooms/upgrade/upgrade.component';
 
 const routes: Routes = [
   { 
@@ -24,6 +25,9 @@ const routes: Routes = [
       }, {
         path: 'rooms/:id',
         component: RoomComponent
+      },{
+        path: 'upgrade',
+        component: UpgradeComponent
       }
     ]
   },
