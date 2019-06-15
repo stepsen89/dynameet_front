@@ -12,6 +12,9 @@ import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { environment } from '../environments/environment';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { RoomsComponent } from './main/rooms/rooms.component';
+import { RoomComponent } from './main/rooms/room/room.component';
+import { BookingComponent } from './main/booking/booking.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,9 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
     LayoutComponent,
     HeaderComponent,
     FooterComponent,
+    RoomsComponent,
+    RoomComponent,
+    BookingComponent,
   ],
   imports: [
     BrowserModule,
