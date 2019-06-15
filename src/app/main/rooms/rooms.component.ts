@@ -9,13 +9,20 @@ import { AngularFireDatabase } from '@angular/fire/database';
 export class RoomsComponent {
   rooms: any;
   roomsArray: any;
+  roomBookings: any;
 
   constructor(
     db: AngularFireDatabase
-  ) { 
+  ) {
     this.rooms = db.object('roomDetails').valueChanges().subscribe((res) => {
       this.roomsArray = Object.values(res);
       console.log(this.roomsArray);
+    });
+
+    this.roomBookings = db.object('roomBookings').valueChanges().subscribe((res) => {
+      const rooms = Object.values(res);
+      this.roomBookings = rooms.map(room => Object.keys(room).filter(bookingDateForRoom => !rooms[bookingDateForRoom]).splice(1, 10));
+      console.log(this.roomBookings);
     });
   }
 }
