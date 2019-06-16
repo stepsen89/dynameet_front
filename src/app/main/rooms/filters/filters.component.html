@@ -1,3 +1,72 @@
-<p>
-  filters works!
-</p>
+
+<div class="columns">
+    <div class="column">
+      <h3 class="subtitle"> Select filter for room search </h3>
+      <div class="field">
+          <label class="label"> When? </label>
+          <div class="control">
+            <input class="input" type="text" placeholder="Text input">
+          </div>
+        </div>
+        
+      <div class="field">
+          <label class="label"> Time slot </label>
+          <div class="dropdown">
+              <div class="dropdown-trigger">
+                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                  <span> - choose -</span>
+                  <span class="icon is-small">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                  </span>
+                </button>
+              </div>
+              <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                <div class="dropdown-content" *ngFor="let slot of slots; let i = index"> 
+                  <a href="#" class="dropdown-item">
+                    {{slot[index]}}
+                  </a>
+                </div>
+              </div>
+            </div>
+            </div>
+  
+        <div class="field">
+          <label class="label"> Capacity </label>
+          <div class="dropdown is-hoverable">
+              <div class="dropdown-trigger">
+                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                  <span> - choose -</span>
+                  <span class="icon is-small">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                  </span>
+                </button>
+              </div>
+              <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                <div class="dropdown-content">
+                  <a href="#" class="dropdown-item">
+                    less than 6
+                  </a>
+                  <a class="dropdown-item">
+                    7
+                  </a>
+                  <a href="#" class="dropdown-item is-active">
+                    8
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    9
+                  </a>
+                  <hr class="dropdown-divider">
+                  <a href="#" class="dropdown-item">
+                    More than 10
+                  </a>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="field is-grouped">
+          <div class="control">
+            <button class="button is-link">Book Slot</button>
+          </div>
+        </div>
+    </div>
+  </div>
