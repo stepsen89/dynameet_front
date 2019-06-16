@@ -6,6 +6,7 @@ import { RoomsComponent } from './main/rooms/rooms.component';
 import { RoomComponent } from './main/rooms/room/room.component';
 import { BookingComponent } from './main/booking/booking.component';
 import { UpgradeComponent } from './main/rooms/upgrade/upgrade.component';
+import { PriceviewComponent } from './main/priceview/priceview.component';
 
 const routes: Routes = [
   { 
@@ -28,6 +29,9 @@ const routes: Routes = [
       },{
         path: 'upgrade',
         component: UpgradeComponent
+      },{
+        path: 'priceview',
+        component: PriceviewComponent
       }
     ]
   },

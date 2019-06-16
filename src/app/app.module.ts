@@ -17,6 +17,7 @@ import { RoomComponent } from './main/rooms/room/room.component';
 import { BookingComponent } from './main/booking/booking.component';
 import { FiltersComponent } from './main/rooms/filters/filters.component';
 import { UpgradeComponent } from './main/rooms/upgrade/upgrade.component';
+import { PriceviewComponent } from './main/priceview/priceview.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { UpgradeComponent } from './main/rooms/upgrade/upgrade.component';
     BookingComponent,
     FiltersComponent,
     UpgradeComponent,
+    PriceviewComponent,
   ],
   imports: [
     BrowserModule,

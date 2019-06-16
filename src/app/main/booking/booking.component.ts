@@ -8,6 +8,7 @@ import { AngularFireDatabase } from '@angular/fire/database';
 })
 export class BookingComponent implements OnInit {
   showModal: Boolean = false;
+  showItem: Boolean = false;;
 
   constructor(
     public db: AngularFireDatabase
@@ -23,8 +24,12 @@ export class BookingComponent implements OnInit {
   }
 
   removeListItem(){
+    console.log("done");
+    this.showModal ? this.showModal = false : this.showModal = true;
+
+    this.showItem = this.showItem = true;
     const itemRef = this.db.object('roomBookings/room1');
-    itemRef.update({'06-15-2019:19:00:00': "booked"});
+    itemRef.update({'06-15-2019:19:00:00': "hljkljl"});
     console.log(itemRef);
   }
 }
