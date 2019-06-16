@@ -22,7 +22,7 @@ export class RoomsComponent {
     this.roomBookings = db.object('roomBookings').valueChanges().subscribe((res) => {
       const rooms = Object.values(res);
       this.roomBookings = rooms.map(room => Object.keys(room).filter(bookingDateForRoom => !rooms[bookingDateForRoom]).splice(1, 8));
-      console.log(this.roomBookings);
+      console.log(this.roomBookings[1]);
     });
 
     const itemRef = db.object('roomBookings/room1');
