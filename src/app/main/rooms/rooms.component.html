@@ -3,10 +3,8 @@
     <h2 class="title"> Rooms Available </h2>
     <app-filters [slots]="roomBookings[0]"></app-filters>
   </div>
-  <div class="column is-6">
-    <div>
-      <h2> Room </h2>
-    </div>
+  <div class="column is-4 is-offset-1">
+        <h2 class="title"> Rooms in this space </h2>
     <div *ngFor="let room of roomsArray; let i = index">
       <app-room [room]="room" [index]="index"></app-room>
     </div>

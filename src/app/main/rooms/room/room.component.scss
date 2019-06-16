@@ -1,7 +1,14 @@
-.content {
-  width:50%
-}
+// .content {
+//   width:50%
+// }
 
 .room-list--item {
   display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.media {
+  padding: 1rem;
+  padding-top: 2rem;
 }
