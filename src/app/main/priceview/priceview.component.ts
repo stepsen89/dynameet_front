@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
 
 @Component({
@@ -13,8 +13,8 @@ export class PriceviewComponent {
     public db: AngularFireDatabase
   ) { 
     this.roomPrices = db.object('roomPrices').valueChanges().subscribe((res) => {
-      const rooms = Object.values(res);
-      console.log(this.roomPrices);
+      const roomPricesRoom = Object.values(res);
+      console.log(roomPricesRoom);
     });
   }
 
