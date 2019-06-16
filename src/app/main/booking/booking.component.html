@@ -1,24 +1,64 @@
 
-<div class="columns">
+<section class="section">
     <h2 class="title"> Your bookings: </h2>
-  <div class="column is-6 is-offset-1">
-    <article class="media">
-        <figure class="media-left">
-          <p class="image is-64x64">
-            <img src="../../../../assets/images/meetingroomlist.png">
-          </p>
-        </figure>
-        <div class="media-content room-list--item">
-          <div>
-              <p> Meeting Room </p>
-              <p> 17-06-2019 15:00 </p>
-          </div>
+    <div class="columns">
+      <div class="column is-6 is-offset-1">
+        <article class="media">
+            <figure class="media-left">
+              <p class="image is-64x64">
+                <img src="../../../../assets/images/meetingroomlist.png">
+              </p>
+            </figure>
+            <div class="media-content room-list--item">
+              <div>
+                  <p> Meeting Room </p>
+                  <p> 17-06-2019 15:00 </p>
+              </div>
+            </div>
+            <div class="media-right">
+                <button class="button is-primary"> Details </button>
+                <button class="button is-danger" (click)="showModalOnScreen()"> Sell Back </button>
+            </div>
+          </article>
+      </div>
+    </div>
+    <div class="columns">
+        <div class="column is-6 is-offset-1">
+          <article class="media">
+              <figure class="media-left">
+                <p class="image is-64x64">
+                  <img src="../../../../assets/images/meetingroomlist.png">
+                </p>
+              </figure>
+              <div class="media-content room-list--item">
+                <div>
+                    <p> Meeting Room </p>
+                    <p> 20-06-2019 10:00 </p>
+                </div>
+              </div>
+              <div class="media-right">
+                  <button class="button is-primary"> Details </button>
+                  <button class="button is-danger"> Cancel </button>
+              </div>
+            </article>
         </div>
-        <div class="media-right">
-            <button class="button is-primary"> Details </button>
-            <button class="button is-warning"> Cancel </button>
-        </div>
-      </article>
+      </div>
+</section>
 
+
+<div class="modal" [ngClass]="{'is-active': showModal}">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <div class="columns">
+        <div class="column">
+          <h2 class="title"> Cancellation within Sell back period </h2>
+          <h3 class="subtitle"> Are you sure you want to cancel this event and sell it back?</h3>
+          <br>
+          <button class="button is-primary" (click)="removeListItem()"> Yes </button>
+          <span>        </span>
+          <button class="button is-danger" (click)="showModalOnScreen()"> Cancel </button>
+        </div>
+      </div>
+    </div>
+    <button class="modal-close is-large" aria-label="close" (click)="showModalOnScreen()"></button>
   </div>
-</div>
