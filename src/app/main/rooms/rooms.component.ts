@@ -24,5 +24,9 @@ export class RoomsComponent {
       this.roomBookings = rooms.map(room => Object.keys(room).filter(bookingDateForRoom => !rooms[bookingDateForRoom]).splice(1, 8));
       console.log(this.roomBookings);
     });
+
+    const itemRef = db.object('roomBookings/room1');
+    itemRef.update({'06-15-2019:19:00:00': "booked"});
+    console.log(itemRef);
   }
 }
